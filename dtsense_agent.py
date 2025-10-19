@@ -32,7 +32,7 @@ def load_vectorstore():
 vectorstore = load_vectorstore()
 retriever = vectorstore.as_retriever()
 
-search_tool = TavilySearchResults(max_results=5, api_key=os.environ.get("TAVILY_API_KEY"))
+search_tool = TavilySearchResults(max_results=3, api_key=os.environ.get("TAVILY_API_KEY"))
 llm = ChatGroq(model_name="openai/gpt-oss-20b")
 
 # --- Graph State ---
